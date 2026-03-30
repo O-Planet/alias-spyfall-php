@@ -20,7 +20,7 @@ Players take turns asking each other leading questions related to this place, tr
 > 💡 **About the Project:** This game was created to demonstrate and promote the **LOTIS** PHP framework. 
 > 🔗 Framework: https://github.com/O-Planet/LOTIS
 
-📸 Screenshots
+## 📸 Screenshots
 <div align="center">
   <img src="screens/1.jpg" width="200" alt="Screenshot 1"/>
   <img src="screens/2.jpg" width="200" alt="Screenshot 2"/>
@@ -35,11 +35,11 @@ Players take turns asking each other leading questions related to this place, tr
 
 *Screenshots from mobile version*
 
-🎯 Game Objectives
+## 🎯 Game Objectives
 - **For regular players:** Identify the Spy by their suspicious answers and behavior
 - **For the Spy:** Either remain undetected or correctly guess the location the others are talking about
 
-✨ Features
+## ✨ Features
 - Support for up to 1000 players in a single game
 - Simple connection via game code — create a session and invite friends
 - Automatic selection of Spy and location
@@ -48,7 +48,7 @@ Players take turns asking each other leading questions related to this place, tr
 - Database of hundreds of diverse locations (from beaches to spaceports)
 - "Merlin" — virtual assistant asking leading questions
 
-🚀 Installation
+## 🚀 Installation
 
 ### Requirements
 - PHP 7.4 or higher
@@ -62,3 +62,62 @@ Players take turns asking each other leading questions related to this place, tr
 ```bash
 git clone [repository-url]
 # or download the archive and extract it
+```
+
+Project structure should be:
+```
+src/
+├── newlotis/          # LOTOS framework
+└── alias/             # Game files (this repository)
+```
+
+#### 2. Configure Database Connection
+Open `connect.php` and set your database parameters:
+
+```php
+<?php
+$databasename = 'alias';        // Database name
+$databaseserver = 'localhost';  // Server address
+$databaseuser = 'root';         // MySQL user
+$databasepassword = 'root';     // Password
+?>
+```
+
+#### 3. Create Database Tables
+Open the following URL in your browser to automatically create the database structure:
+```
+http://your-site/alias/sdb.php?updatereg=create
+```
+
+**Done!** The game is installed and ready to run.
+
+## 🎮 How to Play
+
+1. **Create Game:** The admin creates a game and receives a unique code
+2. **Join:** Players enter the code and their name to join
+3. **Start:** After at least 3 players connect, the admin starts the game
+4. **Gameplay:**
+   - Everyone except the Spy sees the secret location
+   - Players ask each other questions ("Can you buy coffee there?")
+   - The Spy answers without knowing the location but tries not to give themselves away
+5. **Voting:** When time runs out, everyone votes on who the Spy is
+6. **Results:** The team wins (if they caught the Spy) or the Spy wins (if they guessed the location or remained undetected)
+
+## 🛠 Technical Details
+
+- **Language:** PHP (LOTOS framework)
+- **Database:** MySQL
+- **Frontend:** HTML5, CSS3, JavaScript (jQuery)
+- **Data files:**
+  - `secrets.d` — list of locations
+  - `vopr.d` — database of Merlin's questions
+  - `spy.d` — humorous spy tips
+
+## 📄 License
+
+Open source project. Free to use and modify.
+
+## 🔗 Links
+
+- 🎮 **Play Online:** http://www.o-planet.ru/alias/
+- 🛠 **LOTIS Framework:** https://github.com/O-Planet/LOTIS
