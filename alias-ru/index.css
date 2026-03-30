@@ -1,0 +1,242 @@
+#maindiv {
+    background-color: black; /* Черный фон */
+    background-image: url('images/main.jpg'); /* Замените на URL вашей картинки */
+    background-position: right center; /* Прижатие к правой части */
+    background-repeat: no-repeat;
+    background-size: contain; /* Растяжение по вертикали с сохранением пропорций */
+    height: 100vh; /* Высота на весь экран */
+    width: 100%; /* Ширина на весь экран */    
+}
+
+body {
+    background-color: black; 
+    overflow: hidden; 
+}
+
+#gamediv {
+    background-color: black; /* Черный фон */
+    height: 100vh; /* Высота на весь экран */
+    width: 100%; /* Ширина на весь экран */    
+}
+
+.Dialog {
+    font-size: 32px;
+}
+
+.ui-dialog-buttonset {
+    font-size: 30px;
+}
+
+#name {
+    width: 100%;
+    padding-bottom: 20px; 
+    padding-top: 20px;
+    font-size: 30px;
+    color: #8d7fc5;       
+}
+
+.linediv {
+    width: 100%;
+    padding-bottom: 20px; 
+}
+
+.codecapt {
+    font-size: 50px;
+    color: white;
+    margin-right: 50px;
+}
+
+.code {
+    font-size: 50px;
+    color: yellow;   
+    margin-right: 50px;
+}
+
+#codemes {
+    font-size: 30px;
+    font-style: italic;
+    color: #8d7fc5;       
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px; 
+    text-align: center;
+}
+
+#timerdiv {
+    color: #aaaaaa;
+    width: 150px; 
+}
+
+#secretword {
+    width: 70%;
+    text-align: center;
+}
+
+#secretbox {
+    background-color: #252135;
+    color: yellow;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#golosbox {
+    padding-bottom: 20px;
+}
+
+#chat {
+    background-color: #8d7fc5;
+    color: #252135;
+    font-size: 40px;
+    min-height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#chatcapt {
+    width: 110px;
+}
+
+#chatinput {
+    background-color: #252135;
+    color: #dbd2ff;
+    padding-left: 20px;
+    padding-right: 20px;   
+    height: 80px;
+    width: 70%;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+#headdiv {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    height: 15vh;
+    background-image: url('images/alias.png'); /* Замените на URL вашей картинки */
+    background-position: center center; /* Прижатие к правой части */
+    background-repeat: no-repeat;
+    background-size: contain; /* Растяжение по вертикали с сохранением пропорций */
+}
+
+.mainbuttons {
+    width: 60%;
+    margin-left: -15%;
+    margin-bottom: 20px;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 25px;
+}
+
+.timebut {
+    font-size: 40px;
+    border-radius: 15px;
+    width: 100px;    
+    height: 80px;
+    font-size: 40px;
+}
+
+.inputs {
+    width: 80%;
+    text-align: center;
+    color: red;
+}
+
+.messagesbox {
+    flex-grow: 1; /* Позволяет mydiv занимать оставшееся пространство */
+    margin-bottom: 20px; /* Отступ снизу в 20 пикселей */
+    width: 70%; 
+    overflow-y: auto; /* Вертикальная прокрутка */
+    overflow-x: hidden;
+    background-color: #1f1f20;
+    color: #dbd2ff;
+    font-size: 32px;
+    padding: 10px;
+}
+
+.golosuser {
+    color: #252135;
+    background-color: #8d7fc5;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.golosuser:hover {
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.golosuser.selected {
+    color: yellow;
+    background-color: #332958;
+    border-color: #ffcc00; /* Цвет для выделенного элемента */
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+
+.spymess {
+    font-size: 40px; /* Размер шрифта */
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Эффект тени */
+}
+
+#description {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #dbd2ff; /* Light text color for better contrast */
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #332958; /* Dark background for description */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it appears above other content */
+    width: 80%; /* Width of the modal */
+    height: auto; /* Auto height */
+    overflow-y: auto; /* Scroll if content is too long */
+}
+#overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 999; /* Just below the modal */
+}
+#description, #description h2, #description p, #description ul {
+    color: #dbd2ff; /* Light color for text */
+}
+#description h1 {
+    font-size: 24px;
+    color: white; /* White color for the main title */
+}
+.close-btn {
+    background-color: #dbd2ff; /* Button color */
+    color: black; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Align to the right */
+}
+.open-btn {
+    background-color: #dbd2ff; /* Button color */
+    color: black; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
