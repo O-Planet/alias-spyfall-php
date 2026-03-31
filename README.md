@@ -51,7 +51,7 @@ Players take turns asking each other leading questions related to this place, tr
 ## 🚀 Installation
 
 ### Requirements
-- PHP 7.4 or higher
+- PHP 5.7 or higher
 - MySQL / MariaDB
 - Web server (Apache/Nginx)
 - LOTOS framework
