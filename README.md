@@ -119,5 +119,6 @@ Open source project. Free to use and modify.
 
 ## 🔗 Links
 
-- 🎮 **Play Online:** http://www.o-planet.ru/alias/
+- 🎮 **Play Online (EN):** http://www.o-planet.ru/aliasen/
+- 🎮 **Play Online (RU):** http://www.o-planet.ru/alias/
 - 🛠 **LOTIS Framework:** https://github.com/O-Planet/LOTIS
